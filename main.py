@@ -10,10 +10,10 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, cur
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 import os
-from dotenv import load_dotenv
-
-# LOAD ENVIRONMENT VARIABLES
-load_dotenv()
+# from dotenv import load_dotenv
+#
+# # LOAD ENVIRONMENT VARIABLES
+# load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ["SECRET_KEY"]
@@ -21,8 +21,8 @@ ckeditor = CKEditor(app)
 Bootstrap(app)
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['SQLALCHEMY_DATABASE_URI']
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.environ['SQLALCHEMY_TRACK_MODIFICATIONS']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 ##LOGIN MANAGER
