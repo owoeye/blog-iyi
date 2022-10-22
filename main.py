@@ -21,7 +21,7 @@ ckeditor = CKEditor(app)
 Bootstrap(app)
 
 ##CONNECT TO DB
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://jfwbfbpbvargqy:1ae944802a20c51f11db9c0152ce406cd375947c250eb571844334f78f5e48b6@ec2-44-205-63-142.compute-1.amazonaws.com:5432/dd86vet4sa3riq"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://jfwbfbpbvargqy:1ae944802a20c51f11db9c0152ce406cd375947c250eb571844334f78f5e48b6@ec2-44-205-63-142.compute-1.amazonaws.com:5432/dd86vet4sa3riq"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 db = SQLAlchemy(app)
 
